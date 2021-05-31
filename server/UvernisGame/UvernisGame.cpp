@@ -17,6 +17,7 @@ const int SERVER_PORT = 1234;
 #include "routes/game.h"
 
 int File::indent = 3;
+const std::string DATA_FOLDER = "D:\\timur\\server\\UvernisGame\\data";
 
 
 int main() {
@@ -29,6 +30,8 @@ int main() {
 
    // Starting server
    std::cout << "Server started on " << SERVER_HOST << ":" << SERVER_PORT << "\n";
+   std::cout << "Data folder is: " << DATA_FOLDER;
+
    server.listen(SERVER_HOST, SERVER_PORT);
 
    return 0;

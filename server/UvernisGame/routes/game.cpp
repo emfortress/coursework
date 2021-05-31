@@ -42,7 +42,7 @@ namespace RouteGame {
       size_t gameID = std::stoi(getParam(req, "game_id"));
       std::string host = getParam(req, "host");
       std::string action = getParam(req, "action");
-      File* games = new File("..\\data\\games.json");
+      File* games = new File(DATA_FOLDER + "\\games.json");
       bool isDeleteGame = false;
       size_t deleteGameId;
 
@@ -110,7 +110,7 @@ namespace RouteGame {
             else if (action == "connect") {
                std::cout << "Game: Connect action, with host " << host << "\n";
 
-               json defaultUser = File::ReadJson("..\\data\\default-game-user.json");
+               json defaultUser = File::ReadJson(DATA_FOLDER + "\\default-game-user.json");
                defaultUser["host"] = host;
 
                game["users"].push_back(defaultUser);

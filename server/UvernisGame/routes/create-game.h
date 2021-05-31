@@ -7,6 +7,8 @@ using json = nlohmann::json;
 #include <File/File.h>
 #include <limits>
 
+extern const std::string DATA_FOLDER;
+
 namespace RouteCreateGame {
    extern std::string pwd;
    size_t getMinId(json games);

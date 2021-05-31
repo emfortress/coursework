@@ -12,6 +12,8 @@ using json = nlohmann::json;
 #include <tools/getParam.h>
 #include <json/json_algorythms.h>
 
+extern const std::string DATA_FOLDER;
+
 namespace RouteGame {
    extern std::string pwd;
    
